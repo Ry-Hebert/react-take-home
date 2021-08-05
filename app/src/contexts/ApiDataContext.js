@@ -26,7 +26,7 @@ export const ApiDataContextProvider = (props) => {
 
                 console.log(`This is apiRes: ${apiRes} This is resData: ${resData}`)
 
-                setApiData(resData)
+                setApiData(resData.campaigns)
 
             } catch(error){console.log(error)}
         }
@@ -37,7 +37,7 @@ export const ApiDataContextProvider = (props) => {
     console.log(apiData)
 
     return (
-        <ApiDataContext.Provider value={{ apiData: apiData }}>
+        <ApiDataContext.Provider value={{ apiData }}>
         {props.children}
         </ApiDataContext.Provider>
     )
